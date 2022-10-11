@@ -217,7 +217,7 @@ fn main() {
         12000,
         zmin-beadheight,input_data.1,emissivity,maxthreads);
 
-    let mut file = File::create("output/temp_with_time.csv").expect("can't create file.");
+    let mut file = File::create("output/unused_outuput.csv").expect("can't create file.");
 
     let mut bw = BufWriter::with_capacity(10000, file);
 
@@ -293,7 +293,7 @@ fn main() {
 
     mdl.stm.calc_strain_for_all_elements();
     //println!("loads {:?}", mdl.stm.loads);
-    mdl.stm.write("output/model_nodes.csv", "output/model_elements.csv", "output/model_displacements.csv", "output/model_loads.csv", "output/model_bcs.csv", "output/model_strains.csv");
+    mdl.stm.write("output/model_nodes.csv", "output/model_elements.csv", "output/debug_test.csv", "output/model_loads.csv", "output/model_bcs.csv", "output/model_strains.csv");
     println!("Hello, world!");
 
 
